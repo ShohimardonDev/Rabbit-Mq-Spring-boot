@@ -16,3 +16,9 @@ publish:
   queue: publish.queue
   queue-2: publish.queue-2
   exchange: publish.exchange
+routing:
+  queue: routing.queue
+  queue-2: routing.queue-2
+  exchange: routing.exchange
+  routing: routing.routing
+  routing-2: routing.routing-2
