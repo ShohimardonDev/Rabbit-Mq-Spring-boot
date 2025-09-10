@@ -6,6 +6,7 @@ import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.util.StopWatch;
 
 @Service
 @RequiredArgsConstructor
@@ -16,6 +17,8 @@ public class HelloWorldService {
     private String queueName;
 
     public void sayHello(String name) {
+        StopWatch watch = new StopWatch();
+        watch.start("temp");
         rabbitTemplate.convertAndSend(queueName, name);
     }
 

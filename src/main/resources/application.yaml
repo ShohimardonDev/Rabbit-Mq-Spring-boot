@@ -1,3 +1,6 @@
+server:
+  port: 2001
+
 spring:
   rabbitmq:
     host: localhost
@@ -8,3 +11,8 @@ spring:
 hello:
   world:
     queue: hello.world.queue
+
+publish:
+  queue: publish.queue
+  queue-2: publish.queue-2
+  exchange: publish.exchange
