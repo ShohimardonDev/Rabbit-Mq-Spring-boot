@@ -1,0 +1,10 @@
+spring:
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: gle-rabbit
+    password: lXcKV_-WN1sA+FwXiOrx
+
+hello:
+  world:
+    queue: hello.world.queue
