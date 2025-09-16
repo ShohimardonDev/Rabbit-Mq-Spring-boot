@@ -22,3 +22,5 @@ routing:
   exchange: routing.exchange
   routing: routing.routing
   routing-2: routing.routing-2
+rpc:
+  queue: rpc.queue
