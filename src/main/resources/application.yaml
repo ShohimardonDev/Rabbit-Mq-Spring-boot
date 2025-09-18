@@ -7,6 +7,15 @@ spring:
     port: 5672
     username: gle-rabbit
     password: lXcKV_-WN1sA+FwXiOrx
+    # publisher confirms & returns
+    publisher-returns: true
+    template:
+      mandatory: true
+    listener:
+      simple:
+        concurrency: 3
+        max-concurrency: 10
+        prefetch: 20
 
 hello:
   world:
