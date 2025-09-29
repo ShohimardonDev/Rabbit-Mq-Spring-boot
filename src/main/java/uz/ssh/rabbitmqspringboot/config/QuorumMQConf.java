@@ -49,5 +49,11 @@ public class QuorumMQConf {
         f.setAcknowledgeMode(AcknowledgeMode.AUTO);
         return f;
     }
+    @Bean
+    public Queue quorumQueue() {
+        return QueueBuilder.durable("quorum.queue")
+                .withArgument("x-queue-type", "quorum")
+                .build();
+    }
 
 }
